@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hyunah mportpolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- 모바일 디바이스 설정 -->
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script><!--제이쿼리 연결 -->
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script><!-- 제이쿼리모바일 연결 -->
+<meta charset="utf-8">
+<title>ECharts</title>
+    <!-- including ECharts file -->
+<script src="echarts.min.js"></script>
+</head>
+
+<body>
+<div data-role="page"><!-- page -->
+	<div data-role="header">
+		<h2>hyunah mportpolio</h2>
+		<a href="#leftpanel" class="ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">leftpanel</a>
+	</div><!--header -->
+
+	<div data-role="panel" id="leftpanel" data-position="left" data-display="overlay" data-theme="a" class="ui-panel ui-panel-position-left ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open">
+		<div class="ui-panel-inner">
+		<a data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext"  style="margin-top:-10px; margin-left:-10px;margin-bottom:20px;"></a>
+		<ul data-role="listview" class="ui-listview">
+			<li>
+				<a href="index.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">메인페이지</a>
+			</li>
+			<li class="ui-first-child">
+				<a href="my.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">자기소개</a>
+			</li>
+			<li>
+				<a href="graph.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">분석</a>
+			</li>
+			<li>
+				<a href="port.html" class="ui-btn ui-btn-icon-right ui-icon-carat-r">활동</a>
+			</li>
+		</ul>
+		</div><!-- ui-panel-inner -->
+	</div><!-- end of menu-->
+
+	<div data-role="content">  
+	</div><!-- end of content -->
+	<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- including ECharts file -->
+    <script src="echarts.min.js"></script>
+	<body>
+    <!-- preparing a DOM with width and height for ECharts -->
+    <div id="main" style="width:600px; height:400px;"></div>
+	<body>
+		<!-- prepare a DOM container with width and height -->
+		<div id="main" style="width: 600px;height:400px;"></div>
+		<script type="text/javascript">
+			// based on prepared DOM, initialize echarts instance
+			var myChart = echarts.init(document.getElementById('main'));
+	
+			// specify chart configuration item and data
+			var option = {
+				title: {
+					text:''
+				},
+				tooltip: {},
+				legend: {
+					data:['language']
+				},
+				xAxis: {
+					data: ["c","Java","html","css","sql","python"]
+				},
+				yAxis: {},
+				series: [{
+					name: 'language',
+					type: 'bar',
+					data: [5, 20, 36, 41, 39, 30]
+				}]
+			};
+	
+			// use configuration item and data specified to show chart
+			myChart.setOption(option);
+		</script>
+	</body>
+</body>
+</head>
+</html>
+	<div data-role="footer">footer</div><!-- footer -->
+</div><!-- end of page -->
+</body>
+
+</html>
